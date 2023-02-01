@@ -112,6 +112,19 @@ contains(names, 'Colt', result => {
 */
 
 // CODE HERE
+const unique = (arr, callback2) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if(arr[i] === arr[j]) {
+        arr.splice(j,1);
+        j--
+      }
+    }
+  }
+  callback2(arr);
+}
+
+
 const uniq = (array, callback) => {
   for (let i = 0; i < array.length; i++) {
     if(array.indexOf(array[i]) != array.lastIndexOf(array[i])) {

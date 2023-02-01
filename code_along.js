@@ -86,3 +86,20 @@ const greetingMachineTwo = (personObj, functionObj) => {
 for(let i = 0; i < 10; i++) {
 console.log(greetingMachineTwo(people,greetings))
 }
+
+console.log('===========================================');
+
+const arrow = (param, param2, param3) => {return param, param2, param3}
+//function named arrow is just a variable declaration
+//does not need name
+
+() => {} // this is the actual function, parameters and code block
+
+let lastCallBack = lastName => {
+    console.log(`blah blah blah`);
+}
+last(names, lastCallBack);
+//code above and below is the same
+last(names, lastNames => {
+    console.log("blah blah blah");
+})
